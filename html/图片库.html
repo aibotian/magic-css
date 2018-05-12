@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			font-family: "Helvetica", "Arial", serif;
+			color: #333;
+			background-color: #ccc;
+			margin: 1em 10%;
+		}
+		h1 {
+			color: #333;
+			background-color: transparent;
+		}
+		a {
+			color: #c60;
+			background-color: transparent;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		ul {
+			padding: 0;
+		}
+		li {
+			float: left;
+			padding: 1em;
+			list-style: none;
+		}
+		img {
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<h1>Snapshots</h1>
+	<ul>
+		<li>
+			<a href="../images/1.jpg" onclick="showPic(this); return false;" title="1.jpg">第一张图片</a>
+		</li>
+		<li>
+			<a href="../images/2.jpg" onclick="showPic(this); return false;"  title="2.jpg">第二张图片</a>
+		</li>
+		<li>
+			<a href="../images/3.jpg" onclick="showPic(this); return false;"  title="3.jpg">第三张图片</a>
+		</li>
+		<li>
+			<a href="../images/4.jpg" onclick="showPic(this); return false;"  title="4.jpg">第四张图片</a>
+		</li>
+	</ul>
+	<img id="placeholder" style="width: 300px;height: 300px;" src="../images/3.jpg" alt="xxxxx" />
+	<p id="description">choose an change</p>
+	<script>
+		function showPic(whichPic) {
+			var source = whichPic.getAttribute("href")
+			var placeholder = document.getElementById("placeholder")
+			placeholder.setAttribute("src", source)
+
+			var text = whichPic.getAttribute("title")
+			var description = document.getElementById("description")
+			description.childNodes[0].nodeValue = text
+		}
+
+		function countBodyChildren() {
+			var body_element = document.getElementsByTagName("body")[0]
+			// alert(body_element.childNodes.length)
+		}
+
+		window.onload = countBodyChildren;
+	</script>
+</body>
+</html>
