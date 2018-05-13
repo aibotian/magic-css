@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单美化</title>
+	<style>
+		form {
+			padding: 50px;
+		}
+		.group {
+			position: relative;
+		}
+		input[type="text"] {
+			border: 1px solid #ccc;
+			padding: 5px 10px;
+			color: #333;
+			font-size: 14px;
+			background: #fff;
+		}
+		input[type="text"] ~ label {
+			position: absolute;
+			left: 5px;
+			font-size: 12px;
+			color: #333;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		input[type="text"]:focus ~ label,
+		input[type="text"]:active ~ label {
+			top: -10px;
+			transform: none;
+			background-color: #fff;
+			padding: 3px 5px;
+			transition: all .2s ease;
+		}
+		input[type="text"]:focus,
+		input[type="text"]:active {
+			outline: none;
+		}
+		/* radio、checkbox */
+		input[type="radio"] {
+			opacity: 0;
+			height: 0;
+			width: 0;
+			display: none;
+		}
+		.radio label {
+			position: relative;
+		}
+		.radio label:before {
+			content: '';
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			border-radius: 100%;
+			background-color: blue;
+		}
+		input[type="radio"]:checked ~ label:after {
+			content: '';
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: #fff;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 4px;
+			z-index: 2;
+
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<div class="group">
+			<input id="name" type="text" name="">
+			<label for="name">姓名</label>
+		</div>
+		<div class="radio">
+			<input type="radio" id="boy" name="people">
+			<label for="boy">男生</label>
+		</div>
+		<div class="radio">
+			<input type="radio" id="girl" name="people">
+			<label for="girl">女生</label>
+		</div>
+	</form>
+	
+</body>
+</html>
