@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			margin: 30px auto;
+			width: 200px;
+			height: 50px;
+			background-color: #FE6900;
+			position: relative;
+			color: #fff;
+			line-height: 50px;
+			padding-left: 10px;
+		}
+
+		div::before {
+			content: '';
+			display: inline-block;
+			width: 0;
+			height: 0;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			border: 25px solid #FE6900;
+			border-right-color: transparent;
+		}
+	</style>
+</head>
+<body>
+	<div>丝带效果</div>
+</body>
+</html>
