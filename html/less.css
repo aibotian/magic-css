@@ -1,0 +1,66 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #ff0;
+}
+.header {
+  height: 60px;
+  background-color: #000;
+}
+.banner {
+  height: 560px;
+}
+.courses {
+  height: 200px;
+}
+.footer {
+  height: 286px;
+  background-color: #000;
+}
+.fl {
+  float: left;
+}
+.logo {
+  float: left;
+  width: 128px;
+  background-color: #f01400;
+  height: 36px;
+  margin: 12px 25px;
+}
+.nav {
+  float: left;
+}
+.profile {
+  float: right;
+}
+.nav__item {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+}
+.nav__item:hover {
+  background-color: #363c41;
+}
+.nav__item_icon_new {
+  background-color: #363c41;
+}
+.nav__item_icon_new:hover {
+  background-color: #363c41;
+}
+.profile__item {
+  display: inline-block;
+  line-height: 60px;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background-color: #363c41;
+}
+.ava {
+  width: 36px;
+  height: 36px;
+  margin: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}

@@ -1,0 +1,92 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: #ff0;
+}
+
+@header-height: 60px;
+@banner-height: 560px;
+@course-height: 200px;
+@footer-height: 286px;
+@header-bottom-bgcolor: #000;
+
+
+@bg-link-hover: #363c41;
+.bg-hover() {
+	background-color: @bg-link-hover;
+}
+
+.border-radius(@radius: 50%) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.header {
+	height: @header-height;
+	background-color: @header-bottom-bgcolor;
+}
+.banner {
+	height: @banner-height;
+}
+.courses {
+	height: @course-height;
+}
+.footer {
+	height: @footer-height;
+	background-color: @header-bottom-bgcolor;
+}
+
+.fl {
+	float: left;
+}
+.fr() {
+	float: right;
+}
+
+.logo {
+	.fl();
+	width: 128px;
+	background-color: #f01400;
+	height: 36px;
+	margin: 12px 25px;
+}
+
+.nav {
+	.fl();
+}
+.profile {
+	.fr();
+}
+.nav__item {
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 20px;
+}
+.nav__item:hover {
+	.bg-hover()
+}
+.nav__item_icon_new {
+	.bg-hover()
+}
+.nav__item_icon_new:hover {
+	.bg-hover();
+}
+
+.profile__item {
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	width: 60px;
+	height: 60px;
+	box-sizing: border-box;
+	.bg-hover();
+}
+
+.ava {
+	width: 36px;
+	height: 36px;
+	margin: 12px;
+	.border-radius();
+}
