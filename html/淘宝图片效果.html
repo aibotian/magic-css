@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.image {
+			height: 200px;
+		}
+		.media {
+			width: 200px;
+			height: 200px;
+			overflow: hidden;
+			position: relative;
+		
+		}
+		.media-object {
+			display: block;
+			height: 200px;
+		}
+		img {
+			vertical-align: top;
+		}
+		.media-object:hover+.media-body{
+			height: 30px;
+			transition: all .5s;
+		}
+		.media-body {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			line-height: 30px;
+			height: 0px;
+			text-align: center;
+			background-color: rgba(255, 255, 255, .8);
+			color: red;
+			z-index: 2;
+		}
+		.media-body h3{
+			font-size: 14px;
+			font-weight: normal;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="media">
+		<a href="" class="media-object">
+			<img class="image" src="../images/1.jpg" alt="">
+		</a>
+		<div class="media-body">
+			<h3 class="media-heading">骑行必买</h3>
+		</div>
+	</div>
+</body>
+</html>
