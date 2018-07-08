@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			display: flex;
+			flex-wrap: wrap;
+
+		}
+		.box > div {
+			min-width: 20%;
+			flex-basis: 10%;
+			height: 300px;
+			border: 1px solid #ccc;
+			margin: 3px;
+		}
+
+		.box > div:nth-child(1) {
+			background-image: linear-gradient(to top, red, blue);
+		}
+		.box > div:nth-child(2) {
+			background-image: linear-gradient(to bottom, red, blue);
+		}
+		.box > div:nth-child(3) {
+			background-image: linear-gradient(to left, red, blue);
+		}
+		.box > div:nth-child(4) {
+			background-image: linear-gradient(to right, red, blue);
+		}
+		.box > div:nth-child(5) {
+			background-image: linear-gradient(45deg, red, blue);
+		}
+		.box > div:nth-child(6) {
+			background-image: linear-gradient(to top left, red, blue);
+		}
+		.box > div:nth-child(7) {
+			background-image: linear-gradient(to top right, red, blue);
+		}
+		.box > div:nth-child(8) {
+			background-image: linear-gradient(to bottom left, red, blue);
+		}
+		.box > div:nth-child(9) {
+			background-image: linear-gradient(to bottom right, red, blue);
+		}
+		.box > div:nth-child(10) {
+			background-image: linear-gradient(-45deg, red, blue);
+		}
+		.box > div:nth-child(11) {
+			background-image: linear-gradient(to right, red, blue,yellow, green , orange, lime, gray);
+		}
+		.box > div:nth-child(12) {
+			background-image: linear-gradient(to right, red 0%, blue 20%,yellow 40%, green 60%, orange 70%, lime 80%, gray 90%,white 100%);
+		}
+		.box > div:nth-child(13) {
+			background-image: linear-gradient(to right, red 0%, red 49.9%, blue 50%, blue 100%);
+		}
+		.box > div:nth-child(14) {
+			background-image: linear-gradient(to right, red 0%, red 49.9%, blue 50%, blue 100%);
+			background-size: 40px 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div>to top</div>
+		<div>to bottom</div>
+		<div>to left</div>
+		<div>to right</div>
+		<div>45deg</div>
+		<div>to top left</div>
+		<div>to top right</div>
+		<div>to bottom left</div>
+		<div>to bottom right</div>
+		<div>-45deg</div>
+		<div>多色</div>
+		<div>多色</div>
+		<div>对半分</div>
+		<div>斑马线</div>
+	</div>
+</body>
+</html>
