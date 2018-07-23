@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.listItems {
+    list-style: none outside none;
+    padding: 0;
+    margin: 0;
+    height: 160px;
+    overflow-y: hidden;
+    position: relative;
+}
+.listItems li {
+    line-height: 22px;
+    margin-bottom: 20px;
+    position: absolute;
+    transform: translateY(-160px);
+}
+.listItems li:nth-of-type(1) {
+    animation: item-child-1 0.85s ease-in-out 0.65s forwards;
+}
+.listItems li:nth-of-type(2) {
+    animation: item-child-2 0.65s ease-in-out 0.45s forwards;
+}
+.listItems li:nth-of-type(3) {
+    animation: item-child-3 0.45s ease-in-out 0.25s forwards;
+}
+.listItems li:last-of-type {
+    margin-bottom: 0;
+    animation: item-child-4 0.25s ease-in-out 0.05s forwards;
+}
+.listItems li::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid lime;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@keyframes item-child-1 {
+    from {
+        transform: translateY(-160px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes item-child-2 {
+    from {
+        transform: translateY(-118px);
+    }
+    to {
+        transform: translateY(42px);
+    }
+}
+@keyframes item-child-3 {
+    from {
+        transform: translateY(-76px);
+    }
+    to {
+        transform: translateY(84px);
+    }
+}
+@keyframes item-child-4 {
+    from {
+        transform: translateY(-34px);
+    }
+    to {
+        transform: translateY(126px);
+    }
+}
+
+	</style>
+</head>
+<body>
+	<ul class="listItems">
+                        <li>花名册、考勤与智能人事互通完成</li>
+                        <li>工资表导入成功</li>
+                        <li>当月薪资表已生成</li>
+                        <li>当月工资条已生成</li>
+                    </ul>
+</body>
+</html>
