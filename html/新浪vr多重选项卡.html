@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			list-style-type: none
+		}
+		.clearfix:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.clearfix {
+			zoom: 1;
+		}
+		.box {
+			width: 920px;
+			margin: 30px auto;
+		}
+		.nav {
+			float: left;
+			width: 100px;
+			height: 200px;
+			background-color: #ccc;
+			padding: 1px 0;
+		}
+		.nav li {
+			height: 100px;
+			line-height: 100px;
+			font-size: 28px;
+			font-family: "Microsoft YaHei", "微软雅黑";
+			text-align: center;
+		}
+		.nav .active {
+			background-color: #e0e0e0;
+			border-left: solid 1px #666;
+		}
+
+		.content_box {
+			margin-left: 100px;
+		}
+		.contNav {
+			height: 30px;
+			border-bottom: 1px solid #666;
+			line-height: 30px;
+			font-family: "Microsoft YaHei", "微软雅黑";
+			font-size: 16px;
+			margin-left: 20px;
+		}
+		.contNav li {
+			float: left;
+			margin-right: 30px;
+		}
+		.contNav .active {
+			border-bottom: 1px solid pink;
+		}
+		.cont_item {
+			margin-top: 20px;
+		}
+		.item {
+			float: left;
+			width: 120px;
+			height: 150px;
+			background-color: #ebebeb;
+			margin: 0 20px;
+		}
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box clearfix">
+		<ul class="nav" id="nav">
+			<li class="active">选项一</li>
+			<li>选项二</li>
+		</ul>
+		<div class="content_box" id="content_box">
+			<div class="content">
+				<ul class="contNav">
+					<li class="active">热门关注</li>
+					<li>最新上市</li>
+					<li>评分榜单</li>
+					<li>移动头显</li>
+					<li>分体头显</li>
+					<li>一体头显</li>
+					<li>0~1500</li>
+					<li>1500~4000</li>
+				</ul>
+				<div class="cont">
+					<div class="cont_item clearfix">
+						<div class="item">项目1</div>
+						<div class="item">项目1</div>
+						<div class="item">项目1</div>
+						<div class="item">项目1</div>
+						<div class="item">项目1</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目2</div>
+						<div class="item">项目2</div>
+						<div class="item">项目2</div>
+						<div class="item">项目2</div>
+						<div class="item">项目2</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目3</div>
+						<div class="item">项目3</div>
+						<div class="item">项目3</div>
+						<div class="item">项目3</div>
+						<div class="item">项目3</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目4</div>
+						<div class="item">项目4</div>
+						<div class="item">项目4</div>
+						<div class="item">项目4</div>
+						<div class="item">项目4</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目5</div>
+						<div class="item">项目5</div>
+						<div class="item">项目5</div>
+						<div class="item">项目5</div>
+						<div class="item">项目5</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目6</div>
+						<div class="item">项目6</div>
+						<div class="item">项目6</div>
+						<div class="item">项目6</div>
+						<div class="item">项目6</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目7</div>
+						<div class="item">项目7</div>
+						<div class="item">项目7</div>
+						<div class="item">项目7</div>
+						<div class="item">项目7</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目8</div>
+						<div class="item">项目8</div>
+						<div class="item">项目8</div>
+						<div class="item">项目8</div>
+						<div class="item">项目8</div>
+					</div>
+				</div>
+			</div>
+			<div class="content hide">
+				<ul class="contNav">
+					<li class="active">热门游戏</li>
+					<li>最新入库</li>
+					<li>评分榜单</li>
+					<li>期待游戏</li>
+					<li>少女游戏</li>
+				</ul>
+				<div class="cont">
+					<div class="cont_item clearfix">
+						<div class="item">项目1</div>
+						<div class="item">项目1</div>
+						<div class="item">项目1</div>
+						<div class="item">项目1</div>
+						<div class="item">项目1</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目2</div>
+						<div class="item">项目2</div>
+						<div class="item">项目2</div>
+						<div class="item">项目2</div>
+						<div class="item">项目2</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目3</div>
+						<div class="item">项目3</div>
+						<div class="item">项目3</div>
+						<div class="item">项目3</div>
+						<div class="item">项目3</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目4</div>
+						<div class="item">项目4</div>
+						<div class="item">项目4</div>
+						<div class="item">项目4</div>
+						<div class="item">项目4</div>
+					</div>
+					<div class="cont_item hide clearfix">
+						<div class="item">项目5</div>
+						<div class="item">项目5</div>
+						<div class="item">项目5</div>
+						<div class="item">项目5</div>
+						<div class="item">项目5</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var oNav = document.getElementById("nav")
+		var oLi = oNav.getElementsByTagName("li")
+
+		var oBox = document.getElementById("content_box")
+		var oDiv = oBox.getElementsByClassName("content")
+
+		for(var i = 0;i< oLi.length;i++) {
+			oLi[i].dataset.index = i
+			oLi[i].onmouseover = function() {
+				for(var j=0;j<oLi.length;j++) {
+					oLi[j].className=""
+					oDiv[j].className = "content hide"
+				}
+				console.log(this.dataset.index)
+				oLi[this.dataset.index].className = "active"
+				oDiv[this.dataset.index].className = "content"
+			}
+		}
+
+
+		function tab(parentElement) {
+			var oParent = parentElement;
+			var oLi = oParent.getElementsByClassName("contNav")[0].getElementsByTagName("li")
+			var oDiv = oParent.getElementsByClassName("cont_item")
+			console.log(oLi)
+
+			for(var i = 0; i<oLi.length;i++) {
+				oLi[i].dataset.index = i;
+				oLi[i].onmouseover = function() {
+
+					for(var j = 0;j<oLi.length; j++) {
+						oLi[j].className = "";
+						oDiv[j].className = "cont_item hide clearfix";
+					}
+					oLi[this.dataset.index].className = "active"
+					oDiv[this.dataset.index].className = "cont_item clearfix"
+
+				}
+			}
+		}
+
+		tab(oDiv[0])
+		tab(oDiv[1])
+
+
+	</script>
+</body>
+</html>
