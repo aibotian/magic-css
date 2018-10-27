@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东选项卡</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.clearfix:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.clearfix {
+			zoom: 1;
+		}
+		ul {
+			list-style-type: none;
+		}
+		.box {
+			width: 1200px;
+			margin: 40px auto;
+		}
+		.hd {			border-bottom: 1px solid #f00;
+
+		}
+		.box ul {
+			float: right;
+		}
+		.box li {
+			float: left;
+			height: 30px;
+			font: 14px/30px "Microsoft YaHei", "微软雅黑";
+			padding: 0 14px;
+			cursor: pointer;
+		}
+		.box .active {
+			border: 1px solid red;
+			border-top-width: 3px;
+			border-bottom: none;
+			height: 31px;
+			margin-bottom: -1px;
+			position: relative;
+			background: #fff;
+			margin-left: -1px;
+			margin-right: -1px;
+			line-height: 27px;
+		}
+		.content {
+			height: 400px;
+			background-color: lime;
+			display: none;
+			text-align: center;
+			font: 50px/400px "Microsoft-YaHei", "微软雅黑";
+		}
+		.show {
+			display: block;
+		}
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+	<div class="hd clearfix">
+		<ul class="list" id="list">
+			<li>男装</li>
+			<li>女装</li>
+			<li>鞋靴</li>
+			<li>箱包</li>
+			<li>内衣配饰</li>
+			<li>珠宝首饰</li>
+			<li>奢品礼品</li>
+			<li>奢华腕表</li>
+		</ul>
+	</div>
+	<div class="bd" id="bd">
+		<div class="content">男装</div>
+		<div class="content">女装</div>
+		<div class="content">鞋靴</div>
+		<div class="content">箱包</div>
+		<div class="content">内衣配饰</div>
+		<div class="content">珠宝首饰</div>
+		<div class="content">奢品礼品</div>
+		<div class="content">奢华腕表</div>
+	</div>
+	</div>
+
+	<script>
+		var oUl = document.getElementById("list");
+		var oLi = oUl.getElementsByTagName("li");
+		var oContent = document.getElementById("bd");
+		var oDiv = oContent.getElementsByTagName("div");
+
+		oLi[1].className="active";
+		oDiv[1].style.display = "block";
+
+		for(var i = 0;i < oLi.length; i++) {
+			oLi[i].dataset.index = i;
+			oLi[i].onmouseover = function(){
+				for(var j=0; j < oLi.length; j++) {
+					oLi[j].className = "";
+					oDiv[j].style.display = "none";
+				}
+				this.className="active"
+				oDiv[this.dataset.index].style.display = "block"
+
+			}
+		}
+	</script>
+</body>
+</html>
