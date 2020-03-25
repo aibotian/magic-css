@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>pre load</title>
+  <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+</head>
+<body>
+
+  <button onclick="loadImage();" class="load-image">Load Image</button>
+
+  <script type="text/javascript">
+    let img = null;
+    function loadImage() {
+      var preload = new createjs.LoadQueue();
+      preload.addEventListener("fileload", handleFileComplete);
+      preload.loadFile("images/1.png");
+    }
+
+    function handleFileComplete(event) {
+      img = event.result;
+      document.body.appendChild(img)
+    }
+
+    // TODO something
+
+  </script>
+</body>
+</html>
